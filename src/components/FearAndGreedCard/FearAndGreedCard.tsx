@@ -1,13 +1,17 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
+import { SquareCard } from '../SquareCard/SquareCard';
+import styles from "./FearAndGreedCard.module.css";
 
 export function FearAndGreedCard() {
-    return <div>
-        <FearGreedProgressbar />
-    </div>
+    return <SquareCard title={"Fear & Greed Index"}>
+        <FearGreedGraph />
+        <FearGreedText />
+    </SquareCard>
+
 }
 
-function FearGreedProgressbar() {
-    return <div style={{ width: 100, height: 100 }}>
+export function FearGreedGraph() {
+    return <div style={{ width: 120, height: 70, overflow: "hidden", lineHeight: 1 }}>
         <CircularProgressbar
             value={10}
             maxValue={100}
@@ -35,11 +39,18 @@ function FearGreedProgressbar() {
 
                 text: {
                     fill: 'rgb(239, 239, 239)',
-                    fontSize: '16px',
+                    fontSize: '20px',
                     fontWeight: 700,
-                    transform: 'translateX(-8px) translateY(5px)',
+                    transform: 'translateX(-9px) translateY(5px)',
                 },
             }}
         />
-    </div>
+    </ div >
+}
+
+function FearGreedText() {
+    return <>
+        <p className={styles.fearGredValue}>Greed</p>
+        <p className={styles.fearGredMessage}>Market sentiment is currently driven by greed.</p>
+    </>
 }
