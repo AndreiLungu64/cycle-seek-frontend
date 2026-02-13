@@ -1,4 +1,5 @@
 import './App.css'
+import BtcFloatCard from './components/BtcFloatCard'
 import BtcPriceCard from './components/BtcPriceCard'
 import FearAndGreedCard from './components/FearAndGreedCard'
 import RsiCard from './components/RsiCard'
@@ -9,6 +10,7 @@ function App() {
             <BtcPriceCard />
             <FearAndGreedCard />
             <RsiCard />
+            <BtcFloatCard />
         </>
     )
 }
