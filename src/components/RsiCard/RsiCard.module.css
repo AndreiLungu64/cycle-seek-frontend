@@ -1,0 +1,68 @@
+.rsiScoreContainer {
+  width: 100%;
+}
+
+.signalTypeContainer {
+  width: 100%;
+}
+
+.spaceBetweenBontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.rsiBar {
+  width: 100%;
+  height: 1.2rem;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #1f2937;
+  margin: 0.2rem 0;
+}
+
+.rsiBar::-webkit-progress-bar {
+  background-color: #1f2937;
+}
+
+.rsiBar::-webkit-progress-value {
+  background-color: #3b82f6;
+}
+
+.rsiBar::-moz-progress-bar {
+  background-color: #3b82f6;
+}
+
+.info {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0.2rem 0;
+}
+
+.signalTypeInfo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+#hold {
+  color: #3b82f6;
+}
+
+.bottomLine {
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background-color: #1f2937;
+  margin-top: 0.4rem;
+}
