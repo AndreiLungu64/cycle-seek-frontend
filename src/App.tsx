@@ -1,22 +1,17 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import BtcDominanceCard from './components/BtcDominanceCard'
-import BtcFloatCard from './components/BtcFloatCard'
-import BtcPriceCard from './components/BtcPriceCard'
-import FearAndGreedCard from './components/FearAndGreedCard'
-import LongShortCard from './components/LongShortCard'
-import RsiCard from './components/RsiCard'
 
+import Dashboard from './pages/Dashboard'
+
+const router = createBrowserRouter([
+    { path: "/", element: <Dashboard />, errorElement: <div>404 Not Found</div> },
+    { path: "/chart", element: <Dashboard /> },
+    { path: "/trades", element: <Dashboard /> }
+])
 function App() {
-    return (
-        <>
-            <BtcPriceCard />
-            <FearAndGreedCard />
-            <RsiCard />
-            <BtcFloatCard />
-            <LongShortCard />
-            <BtcDominanceCard />
-        </>
-    )
+    return <RouterProvider router={router} />
 }
 
 export default App
+
+
