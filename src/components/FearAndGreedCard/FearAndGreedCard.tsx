@@ -11,7 +11,7 @@ export function FearAndGreedCard() {
 }
 
 export function FearGreedGraph() {
-    return <div style={{ width: 120, height: 70, overflow: "hidden", lineHeight: 1 }}>
+    return <div id={styles.circularBarWrapper}>
         <CircularProgressbar
             value={10}
             maxValue={100}

@@ -12,3 +12,11 @@
   text-wrap: wrap;
   color: #6b7280;
 }
+
+#circularBarWrapper {
+  width: 8rem;
+  height: 5rem;
+  align-self: center;
+  overflow: hidden;
+  line-height: 1;
+}

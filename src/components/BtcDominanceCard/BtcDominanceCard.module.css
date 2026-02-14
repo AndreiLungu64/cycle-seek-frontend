@@ -46,8 +46,8 @@
 }
 
 #dominanceChartWrapper {
-  flex: 1;
-  min-height: 0;
+  width: 100%;
+  height: 6rem;
 }
 
 /* 
@@ -74,6 +74,4 @@ flex: 0 1 auto	0 1 auto	Start at content size, don't grow, can shrink (this is t
 flex: none	    0 0 auto	Start at content size, don't grow, don't shrink (rigid)
 flex: auto	    1 1 auto	Start at content size, grow and shrink
 In your case, flex: 1 (= 1 1 0) means: "start at zero height, then grow to fill whatever space is left after the title, percentage text, and progress bar are laid out." That's why the chart fits perfectly in the remaining space.
-
-
 */
