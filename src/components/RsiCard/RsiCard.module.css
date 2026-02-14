@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.spaceBetweenBontainer {
+.spaceBetweenContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -37,6 +37,7 @@ p {
 
 .rsiBar::-webkit-progress-value {
   background-color: #3b82f6;
+  border-radius: 1rem;
 }
 
 .rsiBar::-moz-progress-bar {
