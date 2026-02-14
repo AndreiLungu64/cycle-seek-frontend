@@ -1,9 +1,9 @@
 .icon {
   width: 20%;
   animation: float 3s ease-in-out infinite;
-  /* filter: drop-shadow(0 0 0.75rem #f7931a); */
-  filter: drop-shadow(0 0 0.75rem #ffd700);
-  /* filter: drop-shadow(0 0 0.75rem #00d4ff); */
+  filter: drop-shadow(0 0 0.75rem #f7931a);
+  /* filter: drop-shadow(0 0 0.75rem #ffd700);
+  filter: drop-shadow(0 0 0.75rem #00d4ff); */
 }
 
 @keyframes float {
@@ -12,7 +12,7 @@
   }
 
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-20px);
   }
 
   100% {

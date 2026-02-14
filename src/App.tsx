@@ -2,6 +2,7 @@ import './App.css'
 import BtcFloatCard from './components/BtcFloatCard'
 import BtcPriceCard from './components/BtcPriceCard'
 import FearAndGreedCard from './components/FearAndGreedCard'
+import LongShortCard from './components/LongShortCard'
 import RsiCard from './components/RsiCard'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
             <FearAndGreedCard />
             <RsiCard />
             <BtcFloatCard />
+            <LongShortCard />
         </>
     )
 }

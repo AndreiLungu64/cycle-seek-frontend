@@ -19,12 +19,12 @@ p {
 }
 
 .rsiBar {
+  display: block; /*by default is display: inline, inline elements ignore height and weight properties*/
   width: 100%;
-  height: 1.2rem;
-  -webkit-appearance: none;
-  appearance: none;
-  border: none;
+  -webkit-appearance: none; /*same as appearance:none but targhets older browsers*/
+  appearance: none; /*without it some browsers may ignore custom colors*/
   overflow: hidden;
+  height: 1rem;
   border-radius: 1rem;
   background-color: #1f2937;
   margin: 0.2rem 0;
@@ -32,6 +32,7 @@ p {
 
 .rsiBar::-webkit-progress-bar {
   background-color: #1f2937;
+  height: 1rem;
 }
 
 .rsiBar::-webkit-progress-value {

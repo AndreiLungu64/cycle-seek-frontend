@@ -15,7 +15,7 @@ function RsiScore() {
             <p>68.0</p>
         </div>
         <div>
-            <progress className={styles.rsiBar} id=" file" max="100" value="70">70%</progress>
+            <progress className={styles.rsiBar} max="100" value="70">70%</progress>
             <p className={styles.spaceBetweenBontainer}><span className={styles.info}>{"Oversold(<30)"}</span><span className={styles.info}>{"Overbought(>70)"}</span></p>
 
         </div>
