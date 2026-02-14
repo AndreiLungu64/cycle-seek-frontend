@@ -6,14 +6,19 @@ export function BtcDominanceCard() {
     return <SquareCard title={"Bitcoin Dominance"}>
         <Dominance />
         <DominanceChart />
+        <DominanceBar />
     </SquareCard>
 }
 
 function Dominance() {
-    return <>
+    return <div style={{ width: "100%" }}>
         <p id={styles.dominanceLine}><span id={styles.dominancePerc}>54.2%</span><span id={styles.info}>of total market</span></p>
-        <progress id={styles.dominanceBar} value={54.2} max={100}></progress>
-    </>
+    </div>
+}
+
+
+function DominanceBar() {
+    return <progress id={styles.dominanceBar} value={54.2} max={100}></progress>
 }
 
 function DominanceChart() {
@@ -86,17 +91,20 @@ function DominanceChart() {
     const series = [
         {
             name: "series-1",
-            data: [35, 55, 50, 60, 55, 65, 58, 70]
+            data: [35, 55, 50, 100, 55, 65, 58,]
         },
 
     ];
     return (
-        <Chart
-            options={options}
-            series={series}
-            type="area"
-            width={"100%"}
-            height={"100%"}
-        />
+        <div id={styles.dominanceChartWrapper}>
+            <Chart
+                options={options}
+                series={series}
+                type="area"
+                width={"100%"}
+                height={"100%"}
+            />
+        </div>
+
     );
 }
