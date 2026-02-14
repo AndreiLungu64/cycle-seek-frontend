@@ -1,4 +1,5 @@
 import './App.css'
+import BtcDominanceCard from './components/BtcDominanceCard'
 import BtcFloatCard from './components/BtcFloatCard'
 import BtcPriceCard from './components/BtcPriceCard'
 import FearAndGreedCard from './components/FearAndGreedCard'
@@ -13,6 +14,7 @@ function App() {
             <RsiCard />
             <BtcFloatCard />
             <LongShortCard />
+            <BtcDominanceCard />
         </>
     )
 }
