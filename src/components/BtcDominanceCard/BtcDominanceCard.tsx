@@ -36,8 +36,11 @@ function DominanceChart() {
             axisTicks: {
                 show: false
             },
+            crosshairs: { show: false },
+            tooltip: { enabled: false },
         },
         yaxis: {
+            max: 100,
             show: false,
             categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
             labels: {
@@ -49,7 +52,6 @@ function DominanceChart() {
             axisTicks: {
                 show: false
             },
-            max: 100,
         },
         stroke: {
             curve: 'smooth' as const,
@@ -75,6 +77,9 @@ function DominanceChart() {
         },
         grid: {
             show: false,
+        },
+        tooltip: {
+            enabled: false,
         },
     };
 
