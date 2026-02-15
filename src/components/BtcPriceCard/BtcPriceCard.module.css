@@ -54,16 +54,16 @@
   padding-right: 1rem;
 }
 
-.nameStyle {
-  font-size: 2.25rem;
-  font-weight: 700;
+.name {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-weight-bold);
   letter-spacing: -0.025em;
   line-height: 1;
 }
 
-.symbolStyle {
-  font-size: 1rem;
-  font-weight: 400;
+.symbol {
+  font-size: var(--font-base);
+  font-weight: var(--font-weight-normal);
   color: rgb(107 114 128);
   padding-left: 0.7rem;
 }
@@ -78,13 +78,13 @@
   margin: 0;
   padding: 0;
   color: #9ca3af;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-bold);
 }
 
 #priceStyle {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: var(--font-3xl);
+  font-weight: var(--font-weight-bold);
   line-height: 1;
 }
 
@@ -97,8 +97,8 @@
 
 .priceContainer p {
   margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: var(--font-base);
+  font-weight: var(--font-weight-normal);
 }
 
 .priceBadge {
@@ -123,7 +123,7 @@
   color: #f87171;
 }
 
-.seeChartsBtn {
+#btnSeeCharts {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,6 +135,8 @@
   gap: 0.5rem;
   cursor: pointer;
   transition: opacity 0.2s;
+  font-size: var(--font-base);
+  font-weight: var(--font-weight-bold);
 }
 
 .seeChartsBtn:hover {
