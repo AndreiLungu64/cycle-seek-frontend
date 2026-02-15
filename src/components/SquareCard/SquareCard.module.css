@@ -1,12 +1,8 @@
 .card {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: stretch;
-  box-sizing: border-box;
-  overflow: hidden;
+  min-width: 0; /*replace the default min-width: auto*/
   gap: 1rem;
   background-color: rgba(255, 255, 255, 0.05);
   border: 0.1rem solid rgba(255, 255, 255, 0.05);
@@ -18,8 +14,11 @@
 #title {
   margin: 0;
   padding: 0;
-  width: 100%;
   text-align: left;
   font-size: var(--font-base);
   font-weight: var(--font-weight-bold);
 }
+
+/*min-width: 0; replace the default min-width: auto which impose min width of a container as the content size, it enables the card to have 
+a width smaller than its content when the space imposes it*/
+/* So min-width: 0 removes the "never shrink below content" protection. It lets the grid actually enforce its column boundaries. */

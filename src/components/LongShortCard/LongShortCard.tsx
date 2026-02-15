@@ -9,7 +9,7 @@ export function LongShortCard() {
 }
 
 function LongShortRatio() {
-    return <div style={{ width: "100%" }}>
+    return <div>
         <p id={styles.longShortRatio}>1.24</p>
         <p className={styles.spaceBetweenContainer}><span id={styles.longPerc} className={styles.percentage}>Longs 55.4%</span><span id={styles.shortPerc} className={styles.percentage}>Shorts 44.6%</span></p>
         <progress id={styles.longShortBar} max="100" value="70">70%</progress>

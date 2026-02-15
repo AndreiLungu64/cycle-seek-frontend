@@ -9,7 +9,7 @@ export function AltcoinSeasonCard() {
 }
 
 function LongShortRatio() {
-    return <div style={{ width: "100%" }}>
+    return <div>
         <p id={styles.seasonPerc}>35<span id={styles.seasonTotalPerc}> / 100</span></p>
         <p className={styles.spaceBetweenContainer}><span id={styles.btcSeasonMarker} className={styles.percentage}>Bitcoin season</span><span id={styles.altSeasonMarker} className={styles.percentage}>Altcoin season</span></p>
         <input id={styles.altSeasonBar} type="range" value="20" min="0" max="100" />

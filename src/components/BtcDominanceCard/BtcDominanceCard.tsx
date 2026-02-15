@@ -11,7 +11,7 @@ export function BtcDominanceCard() {
 }
 
 function Dominance() {
-    return <div style={{ width: "100%" }}>
+    return <div>
         <p id={styles.dominanceLine}><span id={styles.dominancePerc}>54.2%</span><span id={styles.info}>of total market</span></p>
     </div>
 }

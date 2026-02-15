@@ -9,7 +9,7 @@ export function RsiCard() {
 }
 
 function RsiScore() {
-    return <div className={styles.rsiScoreContainer}>
+    return <div>
         <div className={styles.spaceBetweenContainer}>
             <p>RSI (14D)</p>
             <p>68.0</p>
@@ -23,7 +23,7 @@ function RsiScore() {
 }
 
 function SignalType() {
-    return <div className={styles.signalTypeContainer}>
+    return <div>
         <div className={styles.spaceBetweenContainer}>
             <p className={styles.signalTypeInfo}>Signal</p>
             <p className={styles.signalTypeInfo} id={styles.hold}>Hold</p>

@@ -14,14 +14,13 @@
 
 #dominanceLine {
   display: flex;
-  width: 100%;
   justify-content: start;
   align-items: end;
 }
 
 #dominanceBar {
-  display: block;
-  width: 100%;
+  display: block; /*put it on its own line*/
+  width: 100%; /*stretch to fill that line*/
   -webkit-appearance: none;
   appearance: none;
   overflow: hidden;
@@ -46,8 +45,8 @@
 }
 
 #dominanceChartWrapper {
-  width: 100%;
-  height: 6rem;
+  height: 5rem;
+  overflow: hidden;
 }
 
 /* 

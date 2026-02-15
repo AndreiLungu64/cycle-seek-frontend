@@ -1,6 +1,6 @@
 /*Fallback track (background)*/
 #altSeasonBar {
-  display: block;
+  display: block; /*Inputs are inline*/
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
@@ -58,3 +58,5 @@
   font-weight: var(--font-weight-bold);
   color: #f5f5f5;
 }
+
+/* Rule: width: 100% is redundant on div/p/section (block-level elements), but required on input/progress/img/canvas (replaced elements) if you want them to stretch. */

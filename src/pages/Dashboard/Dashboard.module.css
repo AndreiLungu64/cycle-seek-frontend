@@ -5,6 +5,10 @@
   gap: 1rem;
 }
 
+#dashboardGrid > div {
+  display: grid;
+}
+
 .item1 {
   grid-area: 1/1/2/5;
 }

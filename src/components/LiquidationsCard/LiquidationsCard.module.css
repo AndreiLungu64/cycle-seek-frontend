@@ -1,4 +1,5 @@
 #longShortBar {
+  display: block;
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
@@ -26,12 +27,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 #totalLiqContainer {
   display: flex;
-  width: 100%;
   justify-content: start;
   align-items: end;
   margin-bottom: 1rem;
