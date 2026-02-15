@@ -35,8 +35,29 @@ export function Dashboard() {
         <div className={`${styles.item8}`}>
             <AltcoinSeasonCard />
         </div>
-        <div className={`${styles.item9}`}>
+        <div>
             <MarketDataCard title={"MARKET CAP"} value={"$1,264,500,000,000.00"} explanation={"Total value of all mined coins"} />
+        </div>
+        <div>
+            <MarketDataCard title={"VOLUME (24H)"} value={"$34,500,000,000.00"} explanation={"Trading activity"} />
+        </div>
+        <div>
+            <MarketDataCard title={"VOL / MKT CAP"} value={"2.72%"} explanation={"Liquidity indicator"} />
+        </div>
+        <div>
+            <MarketDataCard title={"FDV"} value={"$1,348,000,000,000.00"} explanation={"Fully Diluted Valuation"} />
+        </div>
+        <div>
+            <MarketDataCard title={"CIRCULATING SUPPLY"} value={"19.69M BTC"} explanation={"93.7% of Max"} />
+        </div>
+        <div>
+            <MarketDataCard title={"MAX SUPPLY"} value={"21M BTC"} explanation={"Hard cap limit"} />
+        </div>
+        <div>
+            <MarketDataCard title={"TOTAL SUPPLY"} value={"19.69M BTC"} explanation={"Mined coins (incl. lost)"} />
+        </div>
+        <div>
+            <MarketDataCard title={"TREASURY HOLDINGS"} value={"2.45M BTC"} explanation={"Held by companies/govs"} />
         </div>
     </div>
 }
