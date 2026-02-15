@@ -6,6 +6,8 @@ import FearAndGreedCard from "../../components/FearAndGreedCard";
 import LongShortCard from "../../components/LongShortCard";
 import RsiCard from "../../components/RsiCard";
 import LiquidationsCard from "../../components/LiquidationsCard";
+import AltcoinSeasonCard from "../../components/AltcoinSeasonCard";
+import MarketDataCard from "../../components/MarketDataCard";
 
 export function Dashboard() {
     return <div id={styles.dashboardGrid}>
@@ -29,6 +31,12 @@ export function Dashboard() {
         </div>
         <div className={`${styles.item7}`}>
             <BtcDominanceCard />
+        </div>
+        <div className={`${styles.item8}`}>
+            <AltcoinSeasonCard />
+        </div>
+        <div className={`${styles.item9}`}>
+            <MarketDataCard title={"MARKET CAP"} value={"$1,264,500,000,000.00"} explanation={"Total value of all mined coins"} />
         </div>
     </div>
 }

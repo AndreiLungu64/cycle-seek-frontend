@@ -1,6 +1,6 @@
 #dashboardGrid {
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
@@ -34,4 +34,8 @@
 
 .item7 {
   grid-area: 3/3/4/4;
+}
+
+.item8 {
+  grid-area: 3/4/4/5;
 }

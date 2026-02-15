@@ -1,0 +1,60 @@
+/*Fallback track (background)*/
+#altSeasonBar {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin: 0.2rem 0;
+  background: linear-gradient(90deg, #d37503, #4b5d7c, #6347a3); /*fallback track background*/
+  accent-color: #fef6ec; /*thumb color*/
+}
+
+/*Track background*/
+#altSeasonBar::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #d37503, #4b5d7c, #6347a3);
+}
+
+/*Track background*/
+#altSeasonBar::-moz-range-track {
+  background: linear-gradient(90deg, #d37503, #4b5d7c, #6347a3);
+}
+
+.spaceBetweenContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.percentage {
+  font-size: var(--font-sm);
+}
+
+#seasonPerc {
+  color: #f7931a;
+  font-size: var(--font-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+
+#seasonTotalPerc {
+  color: #6b7280;
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+
+#sentiment {
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-normal);
+  color: #6b7280;
+}
+
+#sentimentValue {
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-bold);
+  color: #f5f5f5;
+}

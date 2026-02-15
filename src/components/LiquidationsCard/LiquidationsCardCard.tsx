@@ -11,7 +11,7 @@ export function LiquidationsCard() {
 function LongShortRatio() {
     return <div style={{ width: "100%", display: "stretched" }}>
         <p id={styles.totalLiqContainer}><span id={styles.totalLiqPerc}>$42.5M</span><span id={styles.info}>total wrecked</span></p>
-        <p className={styles.spaceBetweenContainer}><span id={styles.longPerc} className={styles.percentage}>LONGS 73%</span><span id={styles.shortPerc} className={styles.percentage}>SHORTS 27%</span></p>
+        <p className={styles.spaceBetweenContainer}><span id={styles.longPerc} className={styles.percentage}>Longs 73%</span><span id={styles.shortPerc} className={styles.percentage}>Shorts 27%</span></p>
         <progress id={styles.longShortBar} max="100" value="73">70%</progress>
 
     </div>

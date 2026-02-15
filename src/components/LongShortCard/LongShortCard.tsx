@@ -5,14 +5,13 @@ export function LongShortCard() {
     return <SquareCard title={"Long/Short Ratio"}>
         <LongShortRatio />
         <Sentiment />
-
     </SquareCard>
 }
 
 function LongShortRatio() {
     return <div style={{ width: "100%" }}>
         <p id={styles.longShortRatio}>1.24</p>
-        <p className={styles.spaceBetweenContainer}><span id={styles.longPerc} className={styles.percentage}>LONGS 55.4%</span><span id={styles.shortPerc} className={styles.percentage}>SHORTS 44.6%</span></p>
+        <p className={styles.spaceBetweenContainer}><span id={styles.longPerc} className={styles.percentage}>Longs 55.4%</span><span id={styles.shortPerc} className={styles.percentage}>Shorts 44.6%</span></p>
         <progress id={styles.longShortBar} max="100" value="70">70%</progress>
     </div>
 }
