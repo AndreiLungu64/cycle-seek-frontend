@@ -13,9 +13,9 @@ export function FearAndGreedCard() {
 export function FearGreedGraph() {
     return <div id={styles.circularBarWrapper}>
         <CircularProgressbar
-            value={10}
+            value={55}
             maxValue={100}
-            text={`${10}`}
+            text={`${55}`}
             strokeWidth={10}
             circleRatio={0.50}
             styles={{
@@ -39,8 +39,8 @@ export function FearGreedGraph() {
 
                 text: {
                     fill: 'rgb(239, 239, 239)',
-                    fontSize: '20px',
-                    fontWeight: 700,
+                    fontSize: 'var(--font-lg)',
+                    fontWeight: 'var(--font-weight-bold)',
                     transform: 'translateX(-9px) translateY(5px)',
                 },
             }}

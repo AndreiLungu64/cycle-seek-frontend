@@ -1,14 +1,14 @@
 .fearGredValue {
   margin: 0;
-  font-size: 0.9rem;
-  font-weight: 800;
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-extrabold);
   color: #84cc16;
 }
 
 .fearGredMessage {
   margin: 0;
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-normal);
   text-wrap: wrap;
   color: #6b7280;
 }

@@ -18,6 +18,11 @@ p {
   margin: 0;
 }
 
+.spaceBetweenContainer p {
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-bold);
+}
+
 .rsiBar {
   display: block; /*by default is display: inline, inline elements ignore height and weight properties*/
   width: 100%;
@@ -45,15 +50,15 @@ p {
 }
 
 .info {
-  font-size: 0.7rem;
-  font-weight: 400;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-normal);
   color: #6b7280;
   margin: 0.2rem 0;
 }
 
 .signalTypeInfo {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-bold);
   color: #6b7280;
 }
 
