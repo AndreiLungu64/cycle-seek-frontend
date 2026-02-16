@@ -10,12 +10,12 @@ export function AltcoinSeasonCard() {
 
 function LongShortRatio() {
     return <div>
-        <p id={styles.seasonPerc}>35<span id={styles.seasonTotalPerc}> / 100</span></p>
+        <p className={styles.seasonPerc}>35<span className={styles.seasonTotalPerc}> / 100</span></p>
         <p className={styles.spaceBetweenContainer}><span id={styles.btcSeasonMarker} className={styles.percentage}>Bitcoin season</span><span id={styles.altSeasonMarker} className={styles.percentage}>Altcoin season</span></p>
-        <input id={styles.altSeasonBar} type="range" value="20" min="0" max="100" />
+        <input className={styles.altSeasonBar} type="range" value="20" min="0" max="100" />
     </div>
 }
 
 function Sentiment() {
-    return <p id={styles.sentiment}>It is currently: <span id={styles.sentimentValue}>Bitcoin season</span></p>
+    return <p className={styles.sentiment}>It is currently: <span className={styles.sentimentValue}>Bitcoin season</span></p>
 }

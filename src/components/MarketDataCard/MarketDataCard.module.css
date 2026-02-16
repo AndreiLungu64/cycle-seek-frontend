@@ -1,4 +1,4 @@
-#card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   padding: 1.5rem;
 }
 
-#title {
+.title {
   margin: 0;
   padding: 0;
   font-size: var(--font-base);
@@ -18,12 +18,12 @@
   margin-bottom: 0.3rem;
 }
 
-#value {
+.value {
   font-size: var(--font-lg);
   font-weight: var(--font-weight-bold);
 }
 
-#explanation {
+.explanation {
   font-size: var(--font-sm);
   font-weight: var(--font-weight-normal);
   color: #6b7280;

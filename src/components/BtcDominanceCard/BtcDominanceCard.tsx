@@ -12,13 +12,13 @@ export function BtcDominanceCard() {
 
 function Dominance() {
     return <div>
-        <p id={styles.dominanceLine}><span id={styles.dominancePerc}>54.2%</span><span id={styles.info}>of total market</span></p>
+        <p className={styles.dominanceLine}><span className={styles.dominancePerc}>54.2%</span><span className={styles.info}>of total market</span></p>
     </div>
 }
 
 
 function DominanceBar() {
-    return <progress id={styles.dominanceBar} value={54.2} max={100}></progress>
+    return <progress className={styles.dominanceBar} value={54.2} max={100}></progress>
 }
 
 function DominanceChart() {
@@ -96,7 +96,7 @@ function DominanceChart() {
 
     ];
     return (
-        <div id={styles.dominanceChartWrapper}>
+        <div className={styles.dominanceChartWrapper}>
             <Chart
                 options={options}
                 series={series}

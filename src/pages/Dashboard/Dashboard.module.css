@@ -1,11 +1,12 @@
-#dashboardGrid {
+.dashboardGrid {
   display: grid;
   grid-template-rows: repeat(5, auto);
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
-#dashboardGrid > div {
+.dashboardGrid > div {
   display: grid;
 }
 

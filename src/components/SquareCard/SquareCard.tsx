@@ -7,7 +7,7 @@ interface SquareCardProps {
 
 export function SquareCard({ children, title }: SquareCardProps) {
     return <div className={`${styles.card}`}>
-        <h2 id={styles.title}>{title}</h2>
+        <h2 className={styles.title}>{title}</h2>
         {children}
     </div >
 }

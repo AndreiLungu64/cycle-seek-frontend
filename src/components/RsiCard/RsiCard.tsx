@@ -26,7 +26,7 @@ function SignalType() {
     return <div>
         <div className={styles.spaceBetweenContainer}>
             <p className={styles.signalTypeInfo}>Signal</p>
-            <p className={styles.signalTypeInfo} id={styles.hold}>Hold</p>
+            <p className={`${styles.signalTypeInfo} ${styles.hold}`}>Hold</p>
         </div>
         <div className={styles.bottomLine}></div>
     </div>

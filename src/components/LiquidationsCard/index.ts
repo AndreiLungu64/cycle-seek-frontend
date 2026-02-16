@@ -1,2 +1,2 @@
-import { LiquidationsCard } from "./LiquidationsCardCard";
+import { LiquidationsCard } from "./LiquidationsCard";
 export default LiquidationsCard;

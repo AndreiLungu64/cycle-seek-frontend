@@ -10,7 +10,7 @@ import AltcoinSeasonCard from "../../components/AltcoinSeasonCard";
 import MarketDataCard from "../../components/MarketDataCard";
 
 export function Dashboard() {
-    return <div id={styles.dashboardGrid}>
+    return <div className={styles.dashboardGrid}>
         <div className={`${styles.item1}`}>
             <BtcPriceCard />
         </div>
