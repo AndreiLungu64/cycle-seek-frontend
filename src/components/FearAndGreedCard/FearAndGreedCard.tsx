@@ -1,6 +1,7 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { StatsCard } from '../StatsCard/StatsCard';
 import styles from "./FearAndGreedCard.module.css";
+import utils from "../../styles/utilities.module.css"
 
 export function FearAndGreedCard() {
     return <StatsCard title={"Fear & Greed Index"}>
@@ -11,7 +12,7 @@ export function FearAndGreedCard() {
 }
 
 export function FearGreedGraph() {
-    return <div className={styles.circularBarWrapper}>
+    return <div className={styles.graphicWrapper}>
         <CircularProgressbar
             value={55}
             maxValue={100}
@@ -50,7 +51,7 @@ export function FearGreedGraph() {
 
 function FearGreedText() {
     return <>
-        <p className={styles.fearGredValue}>Greed</p>
-        <p className={styles.fearGredMessage}>Market sentiment is currently driven by greed.</p>
+        <p className={`${styles.value}`}>Greed</p>
+        <p className={`${utils.textSm} ${utils.textGray} ${styles.message}`}>Market sentiment is currently driven by greed.</p>
     </>
 }

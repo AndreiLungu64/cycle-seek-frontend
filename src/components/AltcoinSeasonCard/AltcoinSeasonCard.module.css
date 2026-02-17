@@ -1,5 +1,5 @@
 /*Fallback track (background)*/
-.altSeasonBar {
+.progressBar {
   display: block; /*Inputs are inline*/
   width: 100%;
   -webkit-appearance: none;
@@ -12,43 +12,27 @@
 }
 
 /*Track background*/
-.altSeasonBar::-webkit-slider-runnable-track {
+.progressBar::-webkit-slider-runnable-track {
   background: linear-gradient(90deg, #d37503, #4b5d7c, #6347a3);
 }
 
 /*Track background*/
-.altSeasonBar::-moz-range-track {
+.progressBar::-moz-range-track {
   background: linear-gradient(90deg, #d37503, #4b5d7c, #6347a3);
 }
 
-.percentage {
-  font-size: var(--font-sm);
-}
-
-.seasonPerc {
+.primaryValue {
   color: #f7931a;
   font-size: var(--font-xl);
   font-weight: var(--font-weight-bold);
   margin-bottom: 1rem;
 }
 
-.seasonTotalPerc {
+.secondaryValue {
   color: #6b7280;
   font-size: var(--font-lg);
   font-weight: var(--font-weight-bold);
   margin-bottom: 1rem;
-}
-
-.sentiment {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-normal);
-  color: #6b7280;
-}
-
-.sentimentValue {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-bold);
-  color: #f5f5f5;
 }
 
 /* Rule: width: 100% is redundant on div/p/section (block-level elements), but required on input/progress/img/canvas (replaced elements) if you want them to stretch. */

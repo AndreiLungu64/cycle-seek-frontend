@@ -1,26 +1,8 @@
-.numValues {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-bold);
+.textBlue {
+  color: var(--color-blue);
 }
 
-.info {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-normal);
-  color: #6b7280;
-  margin: 0.2rem 0;
-}
-
-.signalTypeInfo {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-bold);
-  color: #6b7280;
-}
-
-.hold {
-  color: #3b82f6;
-}
-
-.bottomLine {
+.line {
   height: 0.2rem;
   border-radius: 1rem;
   background-color: #1f2937;

@@ -5,42 +5,11 @@
   margin-bottom: 1rem;
 }
 
-.totalLiqPerc {
-  color: #f5f5f5;
-  font-size: var(--font-xl);
-  font-weight: var(--font-weight-bold);
+.totalLiqValueMargin {
   margin-right: 0.4rem;
   line-height: 1;
 }
 
-.percentage {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-bold);
-}
-
-.longPerc {
-  color: #22c55e;
-}
-
-.shortPerc {
-  color: #ef4444;
-}
-
-.splitLiqText {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-normal);
-  color: #6b7280;
+.splitLiqLabelMargin {
   margin-top: 0.8rem;
-}
-
-.splitLiqValue {
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-bold);
-  color: #f5f5f5;
-}
-
-.info {
-  font-size: var(--font-xs);
-  font-weight: var(--font-normal-weight);
-  color: #6b7280;
 }

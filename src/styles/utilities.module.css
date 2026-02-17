@@ -4,3 +4,39 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.textXs {
+  font-size: var(--font-xs);
+}
+
+.textSm {
+  font-size: var(--font-sm);
+}
+
+.textXl {
+  font-size: var(--font-xl);
+}
+
+.fontBold {
+  font-weight: var(--font-weight-bold);
+}
+
+.fontExBold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+.textGreen {
+  color: var(--color-green);
+}
+
+.textRed {
+  color: var(--color-red);
+}
+
+.textGray {
+  color: var(--color-gray);
+}
+
+.textWhite {
+  color: var(--color-white);
+}

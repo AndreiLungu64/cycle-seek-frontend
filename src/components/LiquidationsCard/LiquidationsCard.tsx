@@ -12,15 +12,15 @@ export function LiquidationsCard() {
 
 function LongShortRatio() {
     return <div>
-        <p className={styles.totalLiqContainer}><span className={styles.totalLiqPerc}>$42.5M</span><span className={styles.info}>total wrecked</span></p>
-        <p className={utils.spaceBetween}><span className={`${styles.longPerc} ${styles.percentage}`}>Longs 73%</span><span className={`${styles.shortPerc} ${styles.percentage}`}>Shorts 27%</span></p>
+        <p className={styles.totalLiqContainer}><span className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.totalLiqValueMargin}`}>$42.5M</span><span className={`${utils.textXs} ${utils.textGray}`}>total wrecked</span></p>
+        <p className={utils.spaceBetween}><span className={`${utils.textSm} ${utils.fontBold} ${utils.textGreen}`}>Longs 73%</span><span className={`${utils.textSm} ${utils.fontBold} ${utils.textRed}`}>Shorts 27%</span></p>
         <ProgressBar max={100} value={73} color="#22c55e" background="#ef4444" />
     </div>
 }
 
 function Liquidation() {
-    return <p className={`${styles.splitLiqText} ${utils.spaceBetween}`}>
-        <span>Long Liquidations: <span className={styles.splitLiqValue}>$31.2M</span></span>
-        <span>Short Liquidations: <span className={styles.splitLiqValue}> $11.3M</span></span>
+    return <p className={`${utils.textSm} ${utils.textGray} ${styles.splitLiqLabelMargin} ${utils.spaceBetween}`}>
+        <span>Long Liquidations: <span className={`${utils.fontBold} ${utils.textWhite}`}>$31.2M</span></span>
+        <span>Short Liquidations: <span className={`${utils.fontBold} ${utils.textWhite}`}> $11.3M</span></span>
     </p>
 }

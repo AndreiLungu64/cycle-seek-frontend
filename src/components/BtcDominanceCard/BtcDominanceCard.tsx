@@ -1,6 +1,7 @@
 import StatsCard from "../StatsCard"
 import styles from "./BtcDominanceCard.module.css"
 import Chart from 'react-apexcharts';
+import utils from "../../styles/utilities.module.css";
 
 export function BtcDominanceCard() {
     return <StatsCard title={"Bitcoin Dominance"}>
@@ -12,13 +13,13 @@ export function BtcDominanceCard() {
 
 function Dominance() {
     return <div>
-        <p className={styles.dominanceLine}><span className={styles.dominancePerc}>54.2%</span><span className={styles.info}>of total market</span></p>
+        <p className={styles.valueLineWrapper}><span className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.value}`}>54.2%</span><span className={`${utils.textXs} ${utils.textGray}`}>of total market</span></p>
     </div>
 }
 
 
 function DominanceBar() {
-    return <progress className={styles.dominanceBar} value={54.2} max={100}></progress>
+    return <progress className={styles.progressBar} value={54.2} max={100}></progress>
 }
 
 function DominanceChart() {
@@ -96,7 +97,7 @@ function DominanceChart() {
 
     ];
     return (
-        <div className={styles.dominanceChartWrapper}>
+        <div className={styles.graphicWrapper}>
             <Chart
                 options={options}
                 series={series}

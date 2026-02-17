@@ -12,12 +12,12 @@ export function LongShortCard() {
 
 function LongShortRatio() {
     return <div>
-        <p className={styles.longShortRatio}>1.24</p>
-        <p className={utils.spaceBetween}><span className={`${styles.longPerc} ${styles.percentage}`} >Longs 55.4%</span><span className={`${styles.shortPerc} ${styles.percentage}`} >Shorts 44.6%</span></p>
+        <p className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.ratioMargin}`}>1.24</p>
+        <p className={utils.spaceBetween}><span className={`${utils.textSm} ${utils.fontBold} ${utils.textGreen}`} >Longs 55.4%</span><span className={`${utils.textSm} ${utils.fontBold} ${utils.textRed}`} >Shorts 44.6%</span></p>
         <ProgressBar max={100} value={70} color="#22c55e" background="#ef4444" />
     </div>
 }
 
 function Sentiment() {
-    return <p className={styles.sentiment}>Sentiment leans: <span className={styles.sentimentValue}>Bullish</span></p>
+    return <p className={`${utils.textSm} ${utils.textGray}`}>Sentiment leans: <span className={`${utils.textSm} ${utils.fontBold} ${utils.textWhite}`}>Bullish</span></p>
 }

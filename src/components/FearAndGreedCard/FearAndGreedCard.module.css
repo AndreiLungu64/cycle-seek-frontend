@@ -1,19 +1,16 @@
-.fearGredValue {
+.value {
   margin: 0;
   font-size: var(--font-lg);
   font-weight: var(--font-weight-extrabold);
   color: #84cc16;
 }
 
-.fearGredMessage {
+.message {
   margin: 0;
-  font-size: var(--font-sm);
-  font-weight: var(--font-weight-normal);
   text-wrap: wrap;
-  color: #6b7280;
 }
 
-.circularBarWrapper {
+.graphicWrapper {
   width: 8rem;
   height: 5rem;
   align-self: center;
