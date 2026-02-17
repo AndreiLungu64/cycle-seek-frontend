@@ -1,4 +1,4 @@
-import SquareCard from "../SquareCard"
+import SquareCard from "../StatsCard"
 import styles from "./BtcDominanceCard.module.css"
 import Chart from 'react-apexcharts';
 

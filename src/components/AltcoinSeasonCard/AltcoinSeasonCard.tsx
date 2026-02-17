@@ -1,5 +1,5 @@
 import styles from "./AltcoinSeasonCard.module.css";
-import SquareCard from "../SquareCard";
+import SquareCard from "../StatsCard";
 
 export function AltcoinSeasonCard() {
     return <SquareCard title={"Altcoin Season"}>

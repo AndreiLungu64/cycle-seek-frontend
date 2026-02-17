@@ -1,4 +1,4 @@
-import SquareCard from "../SquareCard"
+import SquareCard from "../StatsCard"
 import styles from "./RsiCard.module.css";
 
 export function RsiCard() {

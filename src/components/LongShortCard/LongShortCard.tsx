@@ -1,4 +1,4 @@
-import SquareCard from "../SquareCard"
+import SquareCard from "../StatsCard"
 import styles from './LongShortCard.module.css'
 
 export function LongShortCard() {

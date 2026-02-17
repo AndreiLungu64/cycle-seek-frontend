@@ -1,5 +1,5 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
-import { SquareCard } from '../SquareCard/SquareCard';
+import { SquareCard } from '../StatsCard/StatsCard';
 import styles from "./FearAndGreedCard.module.css";
 
 export function FearAndGreedCard() {
