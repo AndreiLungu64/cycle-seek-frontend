@@ -21,14 +21,6 @@
   background: linear-gradient(90deg, #d37503, #4b5d7c, #6347a3);
 }
 
-.spaceBetweenContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .percentage {
   font-size: var(--font-sm);
 }

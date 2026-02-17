@@ -1,14 +1,4 @@
-.spaceBetweenContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-p {
-  margin: 0;
-}
-
-.spaceBetweenContainer p {
+.numValues {
   font-size: var(--font-sm);
   font-weight: var(--font-weight-bold);
 }
