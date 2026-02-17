@@ -16,3 +16,16 @@
   border-radius: 10px;
   font-size: var(--font-lg);
 }
+
+.active {
+  background-color: #7c6fff;
+}
+
+.inactive {
+  background-color: #13142b;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-white);
+}
