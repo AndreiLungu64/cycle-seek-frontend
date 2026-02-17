@@ -3,18 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 0.1rem solid rgba(255, 255, 255, 0.05);
-  border-radius: 24px;
-  margin: 0;
-  padding: 1.5rem;
 }
 
 .title {
   margin: 0;
   padding: 0;
   font-size: var(--font-base);
-  font-weight: var(--font-weight-normal);
   margin-bottom: 0.3rem;
 }
 
@@ -25,6 +19,5 @@
 
 .explanation {
   font-size: var(--font-sm);
-  font-weight: var(--font-weight-normal);
-  color: #6b7280;
+  color: var(--color-gray);
 }

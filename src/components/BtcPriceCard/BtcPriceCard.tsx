@@ -1,8 +1,9 @@
 import styles from './BtcPriceCard.module.css';
 import btcIcon from '../../assets/BtcPriceCard/btc-icon.png';
+import utils from "../../styles/utilities.module.css";
 
 export default function BtcPriceCard() {
-    return <div className={styles.compContainer}>
+    return <div className={`${utils.cardBase} ${styles.card}`}>
         <BtcNameSec />
         <BtcPriceSec />
         <AnchBtn />

@@ -4,23 +4,11 @@
   align-items: center;
 }
 
-.compContainer {
+.card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 24px;
-  margin: 0;
-  padding: 1.5rem;
   gap: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 0.1rem solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  position: relative;
-}
-
-.compContainer:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .nameInnerContainer {
@@ -36,7 +24,7 @@
   align-items: end;
 }
 
-.nameRowOne p {
+.nameRowOne > p {
   margin: 0;
 }
 
@@ -61,7 +49,7 @@
 .symbol {
   font-size: var(--font-base);
   font-weight: var(--font-weight-normal);
-  color: rgb(107 114 128);
+  color: var(--color-gray);
   padding-left: 0.7rem;
 }
 
@@ -71,7 +59,7 @@
   border-radius: 6px;
 }
 
-.metaBadge p {
+.metaBadge > p {
   margin: 0;
   padding: 0;
   color: #9ca3af;
@@ -122,8 +110,6 @@
   background: linear-gradient(to right, #4f46e5, #9333ea);
   padding: 0.75rem;
   border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   transition: opacity 0.2s;

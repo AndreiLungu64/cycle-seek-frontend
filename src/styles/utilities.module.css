@@ -40,3 +40,11 @@
 .textWhite {
   color: var(--color-white);
 }
+
+.cardBase {
+  background-color: var(--background-gray);
+  border: 0.1rem solid var(--background-gray);
+  margin: 0;
+  border-radius: 24px;
+  padding: 1.5rem;
+}
