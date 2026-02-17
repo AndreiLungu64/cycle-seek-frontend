@@ -1,11 +1,11 @@
-import SquareCard from "../StatsCard"
+import StatsCard from "../StatsCard"
 import styles from './LiquidationsCard.module.css'
 
 export function LiquidationsCard() {
-    return <SquareCard title={"24 Hours Liquidations"}>
+    return <StatsCard title={"24 Hours Liquidations"}>
         <LongShortRatio />
         <Liquidation />
-    </SquareCard>
+    </StatsCard>
 }
 
 function LongShortRatio() {

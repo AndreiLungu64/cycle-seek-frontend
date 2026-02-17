@@ -1,13 +1,13 @@
-import SquareCard from "../StatsCard"
+import StatsCard from "../StatsCard"
 import styles from "./BtcDominanceCard.module.css"
 import Chart from 'react-apexcharts';
 
 export function BtcDominanceCard() {
-    return <SquareCard title={"Bitcoin Dominance"}>
+    return <StatsCard title={"Bitcoin Dominance"}>
         <Dominance />
         <DominanceChart />
         <DominanceBar />
-    </SquareCard>
+    </StatsCard>
 }
 
 function Dominance() {

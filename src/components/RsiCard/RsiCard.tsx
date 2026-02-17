@@ -1,11 +1,11 @@
-import SquareCard from "../StatsCard"
+import StatsCard from "../StatsCard"
 import styles from "./RsiCard.module.css";
 
 export function RsiCard() {
-    return <SquareCard title={"Relative Strength Index"}>
+    return <StatsCard title={"Relative Strength Index"}>
         <RsiScore />
         <SignalType />
-    </SquareCard>
+    </StatsCard>
 }
 
 function RsiScore() {

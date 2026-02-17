@@ -1,2 +1,2 @@
-import { SquareCard } from "./StatsCard";
-export default SquareCard;
+import { StatsCard } from "./StatsCard";
+export default StatsCard;

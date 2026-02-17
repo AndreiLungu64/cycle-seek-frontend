@@ -1,11 +1,11 @@
 import styles from "./AltcoinSeasonCard.module.css";
-import SquareCard from "../StatsCard";
+import StatsCard from "../StatsCard";
 
 export function AltcoinSeasonCard() {
-    return <SquareCard title={"Altcoin Season"}>
+    return <StatsCard title={"Altcoin Season"}>
         <LongShortRatio />
         <Sentiment />
-    </SquareCard>
+    </StatsCard>
 }
 
 function LongShortRatio() {
