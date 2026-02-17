@@ -13,32 +13,6 @@ p {
   font-weight: var(--font-weight-bold);
 }
 
-.rsiBar {
-  display: block; /*by default is display: inline, inline elements ignore height and weight properties*/
-  width: 100%;
-  -webkit-appearance: none; /*same as appearance:none but targhets older browsers*/
-  appearance: none; /*without it some browsers may ignore custom colors*/
-  overflow: hidden;
-  height: 1rem;
-  border-radius: 1rem;
-  background-color: #1f2937;
-  margin: 0.5rem 0;
-}
-
-.rsiBar::-webkit-progress-bar {
-  background-color: #1f2937;
-  height: 1rem;
-}
-
-.rsiBar::-webkit-progress-value {
-  background-color: #3b82f6;
-  border-radius: 1rem;
-}
-
-.rsiBar::-moz-progress-bar {
-  background-color: #3b82f6;
-}
-
 .info {
   font-size: var(--font-sm);
   font-weight: var(--font-weight-normal);

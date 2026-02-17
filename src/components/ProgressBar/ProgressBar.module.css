@@ -1,0 +1,26 @@
+.bar {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  height: 1rem;
+  border-radius: 1rem;
+  margin: 0.2rem 0;
+  background-color: var(--bar-bg); /*bg color*/
+}
+
+/* bg coor */
+.bar::-webkit-progress-bar {
+  background-color: var(--bar-bg);
+}
+
+/* progress color */
+.bar::-webkit-progress-value {
+  background-color: var(--bar-color);
+}
+
+/* progress color */
+.bar::-moz-progress-bar {
+  background-color: var(--bar-color);
+}

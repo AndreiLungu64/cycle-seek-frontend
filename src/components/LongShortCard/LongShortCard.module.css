@@ -1,27 +1,3 @@
-.longShortBar {
-  display: block;
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  overflow: hidden;
-  height: 1rem;
-  border-radius: 1rem;
-  background-color: #ef4444;
-  margin: 0.2rem 0;
-}
-
-.longShortBar::-webkit-progress-bar {
-  background-color: #ef4444;
-  height: 1rem;
-}
-
-.longShortBar::-webkit-progress-value {
-  background-color: #22c55e;
-}
-.longShortBar::-moz-progress-bar {
-  background-color: #22c55e;
-}
-
 .spaceBetweenContainer {
   display: flex;
   flex-direction: row;

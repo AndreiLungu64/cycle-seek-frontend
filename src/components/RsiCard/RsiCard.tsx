@@ -1,5 +1,6 @@
 import StatsCard from "../StatsCard"
 import styles from "./RsiCard.module.css";
+import ProgressBar from "../ProgressBar";
 
 export function RsiCard() {
     return <StatsCard title={"Relative Strength Index"}>
@@ -15,9 +16,8 @@ function RsiScore() {
             <p>68.0</p>
         </div>
         <div>
-            <progress className={styles.rsiBar} max="100" value="70">70%</progress>
+            <ProgressBar max={100} value={70} color="#3b82f6" background="#1f2937" />
             <p className={styles.spaceBetweenContainer}><span className={styles.info}>{"Oversold(<30)"}</span><span className={styles.info}>{"Overbought(>70)"}</span></p>
-
         </div>
     </div>
 }

@@ -1,5 +1,6 @@
 import StatsCard from "../StatsCard"
 import styles from './LiquidationsCard.module.css'
+import ProgressBar from "../ProgressBar"
 
 export function LiquidationsCard() {
     return <StatsCard title={"24 Hours Liquidations"}>
@@ -12,8 +13,7 @@ function LongShortRatio() {
     return <div>
         <p className={styles.totalLiqContainer}><span className={styles.totalLiqPerc}>$42.5M</span><span className={styles.info}>total wrecked</span></p>
         <p className={styles.spaceBetweenContainer}><span className={`${styles.longPerc} ${styles.percentage}`}>Longs 73%</span><span className={`${styles.shortPerc} ${styles.percentage}`}>Shorts 27%</span></p>
-        <progress className={styles.longShortBar} max="100" value="73">70%</progress>
-
+        <ProgressBar max={100} value={73} color="#22c55e" background="#ef4444" />
     </div>
 }
 
