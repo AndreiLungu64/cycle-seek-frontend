@@ -1,3 +1,5 @@
+import TradingChart from "../../components/TradingChart";
+
 export function Chart() {
-    return <p>Chart</p>
+    return <TradingChart />;
 }
