@@ -1,9 +1,9 @@
-import { useState } from "react"
 import styles from "./Navbar.module.css"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import utils from "../../styles/utilities.module.css"
 
 export function Navbar() {
-    return <div className={styles.navbarWrapper}>
+    return <div className={`${utils.cardBase} ${styles.navbarWrapper}`}>
         <NavbarBtn text="Dashboard" path="/" />
         <NavbarBtn text="Chart" path="/chart" />
         <NavbarBtn text="Trades" path="/trades" />
@@ -11,10 +11,15 @@ export function Navbar() {
 }
 
 function NavbarBtn({ text, path }: { text: string, path: string }) {
-    const selected = useState(false);
-    const btnState = selected ? "inactive" : "active";
-    return <button className={`${styles.btn} styles.${btnState}`}>
-        <Link to={path} className={`${styles.link}`}>{text}</Link>
-    </button >
-
+    const { pathname } = useLocation();
+    const isActive = pathname === path;
+    const btnState = isActive ? "active" : "inactive";
+    return (
+        <Link
+            className={`${styles.btn} ${styles[btnState]}`}
+            to={path}
+        >
+            {text}
+        </Link>
+    );
 }
