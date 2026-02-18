@@ -1,21 +1,30 @@
 import styles from "./TradingChart.module.css";
 import utils from "../../styles/utilities.module.css";
-import TradingVeiewWidget from "../TradingViewWidget/TradingVeiewWidget";
-
+import TradingViewWidget from "../TradingViewWidget/TradingViewWidget";
+import tradingViewLogo from "../../assets/TradingViewWidget/trading-view.svg";
 
 export function TradingChart() {
-    return <div className={`${styles.sectionWrapper}`}>
+    return <div className={styles.sectionWrapper}>
         <Banner />
-        <TradingVeiewWidget />
+        <TradingViewWidget />
     </div >
 }
 
 function Banner() {
     return <div className={` ${utils.cardBase} ${styles.banner}`}>
-        <p className={`${styles.textBase} ${utils.fontBold} ${utils.textWhite}`}>Advanced Real Time Chart</p>
+        <div className={styles.titleWrapper}>
+            <h1 className={`${styles.title} ${utils.fontBold} ${styles.colorBlue}`}>Advanced Real Time Chart by</h1>
+            <Logo />
+        </div>
         <div className={styles.liveWrapper}>
             <div className={styles.dot}></div>
-            <p className={`${utils.textSm} ${utils.textGray}`}>LIVE MARKET DATA</p>
+            <p className={`${utils.textSm} ${utils.textWhite}`}>LIVE MARKET DATA</p>
         </div>
+    </div>
+}
+
+function Logo() {
+    return <div className={styles.svgWraper}>
+        <img src={tradingViewLogo} alt="TradingView" />
     </div>
 }

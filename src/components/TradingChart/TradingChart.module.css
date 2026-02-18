@@ -2,7 +2,27 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.colorBlue {
+  color: var(--color-blue);
+}
+
+.svgWraper {
+  color: var(--color-white);
+  width: 10rem;
+  margin: 0;
+}
+
+.svgWraper svg {
+  width: 100%;
+  display: block;
 }
 
 .banner.banner {
@@ -10,17 +30,23 @@
   justify-content: space-between;
   align-self: stretch;
   flex-grow: 1;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 24px 24px 0px 0px;
+  border-width: 0.1rem 0.1rem 0rem 0.1rem;
+  padding: 1rem;
 }
 
 .liveWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 }
 
-.textBase {
-  font-size: var(--font-base);
+.title {
+  font-size: var(--font-lg);
+  margin: 0;
+  padding: 0;
+  margin-right: 0.5rem;
 }
 
 .dot {
@@ -29,5 +55,4 @@
   background-color: #22c55e;
   border-radius: 50%;
   border: 0.2rem solid #365952;
-  margin-right: 0.4rem;
 }

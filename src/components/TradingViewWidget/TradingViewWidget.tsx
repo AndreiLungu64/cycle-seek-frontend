@@ -33,7 +33,7 @@ function TradingViewWidget() {
           "compareSymbols": [],
           "studies": [],
           "width": "100%",
-          "height": 610
+          "height": "610"
         }`;
             const currentContainer = container.current;
             currentContainer?.appendChild(script);
@@ -50,7 +50,6 @@ function TradingViewWidget() {
     return (
         <div className="tradingview-widget-container" ref={container}>
             <div className="tradingview-widget-container__widget"></div>
-            <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSD/?exchange=BINANCE" rel="noopener nofollow" target="_blank"><span className="blue-text">Bitcoin price</span></a><span className="trademark"> by TradingView</span></div>
         </div>
     );
 }
