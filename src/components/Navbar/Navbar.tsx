@@ -13,10 +13,10 @@ export function Navbar() {
 function NavbarBtn({ text, path }: { text: string, path: string }) {
     const { pathname } = useLocation();
     const isActive = pathname === path;
-    const btnState = isActive ? "active" : "inactive";
+    const btnState = isActive ? "btnActive" : "btnInactive";
     return (
         <Link
-            className={`${styles.btn} ${styles[btnState]}`}
+            className={`${utils.btnBase} ${styles.btnNavbar} ${styles[btnState]}`}
             to={path}
         >
             {text}

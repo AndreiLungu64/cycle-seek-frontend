@@ -1,5 +1,5 @@
 import TradingChart from "../../components/TradingChart";
 
-export function Chart() {
+export function Charts() {
     return <TradingChart />;
 }

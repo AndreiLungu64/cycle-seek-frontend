@@ -1,3 +1,5 @@
+import SearchCard from "../../components/SearchCard"
+
 export function Trades() {
-    return <p>Trades</p>
+    return <SearchCard />
 }

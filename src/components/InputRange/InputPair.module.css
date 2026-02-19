@@ -1,0 +1,33 @@
+.lightGray {
+  color: var(--color-light-gray);
+}
+
+.inputsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.inputsWrapper input {
+  width: 100%;
+  height: 2.8rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  border-radius: 10px;
+  font-size: var(--font-lg);
+}
+
+.inputsWrapper input:focus {
+  outline: 0.1rem solid var(--color-purple);
+}
+
+.dash {
+  margin: 0;
+  padding: 0;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}

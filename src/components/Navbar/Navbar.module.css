@@ -1,27 +1,24 @@
 .navbarWrapper {
-  composes: cardBase from "../../styles/utilities.module.css";
+  display: flex;
   margin-bottom: 2rem;
-  padding: 0.8rem 0.5rem;
-  gap: 5rem;
+  padding: 0.2rem;
   background-color: #13142b;
-  border-radius: 15px;
+  border-radius: 32px;
 }
 
-.btn {
-  text-decoration: none;
-  border: none;
-  border-radius: 10px;
-  padding: 0.4rem 1rem;
+.btnNavbar {
+  border-radius: 24px;
+  padding: 0.7rem 1.5rem;
   font-size: var(--font-lg);
-  color: var(--text-white);
-  font-weight: 600;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
 }
 
-.active {
-  background-color: #7c6fff;
+.btnActive {
+  background-color: var(--color-btn-active);
 }
 
-.inactive {
-  background-color: #13142b;
+.btnInactive {
+  background-color: var(--color-btn-inactive);
   color: var(--color-gray);
 }
