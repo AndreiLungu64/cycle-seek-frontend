@@ -1,5 +1,5 @@
 import styles from "./StatsCard.module.css"
-import utils from "../../styles/utilities.module.css";
+import utils from "../../../../styles/utilities.module.css";
 
 interface StatsCardProps {
     children: React.ReactNode,

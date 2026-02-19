@@ -1,6 +1,6 @@
 import styles from "./AltcoinSeasonCard.module.css";
 import StatsCard from "../StatsCard";
-import utils from '../../styles/utilities.module.css';
+import utils from '../../../../styles/utilities.module.css';
 
 export function AltcoinSeasonCard() {
     return <StatsCard title={"Altcoin Season"}>

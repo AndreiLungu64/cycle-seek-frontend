@@ -1,7 +1,7 @@
 import ProgressBar from "../ProgressBar"
 import StatsCard from "../StatsCard"
 import styles from './LongShortCard.module.css'
-import utils from '../../styles/utilities.module.css';
+import utils from '../../../../styles/utilities.module.css';
 
 export function LongShortCard() {
     return <StatsCard title={"Long/Short Ratio"}>

@@ -1,7 +1,7 @@
 import StatsCard from "../StatsCard"
 import styles from "./RsiCard.module.css";
 import ProgressBar from "../ProgressBar";
-import utils from "../../styles/utilities.module.css"
+import utils from "../../../../styles/utilities.module.css"
 
 export function RsiCard() {
     return <StatsCard title={"Relative Strength Index"}>

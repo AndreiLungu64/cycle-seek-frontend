@@ -1,5 +1,5 @@
 import styles from "./MarketDataCard.module.css";
-import utils from "../../styles/utilities.module.css";
+import utils from "../../../../styles/utilities.module.css";
 
 export function MarketDataCard({ title, value, explanation }: { title: string, value: string, explanation: string }) {
     return <div className={`${utils.cardBase} ${styles.card}`}>

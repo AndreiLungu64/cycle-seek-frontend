@@ -1,7 +1,7 @@
 import styles from "./SearchCard.module.css"
-import utils from "../../styles/utilities.module.css"
+import utils from "../../../../styles/utilities.module.css"
 import { useState, type Dispatch, type SetStateAction } from 'react'
-import InputPair from "../InputRange";
+import InputPair from "../InputPair";
 
 export function SearchCard() {
     return <div className={`${utils.cardBase} ${styles.cardWrapper}`}>

@@ -1,5 +1,5 @@
 import styles from "./InputPair.module.css";
-import utils from "../../styles/utilities.module.css";
+import utils from "../../../../styles/utilities.module.css";
 
 export function InputPair({ label, type }: { label: string, type: string }) {
     return <div >

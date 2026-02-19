@@ -1,7 +1,7 @@
 import StatsCard from "../StatsCard"
 import styles from './LiquidationsCard.module.css'
 import ProgressBar from "../ProgressBar"
-import utils from '../../styles/utilities.module.css';
+import utils from '../../../../styles/utilities.module.css';
 
 export function LiquidationsCard() {
     return <StatsCard title={"24 Hours Liquidations"}>

@@ -1,7 +1,7 @@
 import styles from "./TradingChart.module.css";
-import utils from "../../styles/utilities.module.css";
+import utils from "../../../../styles/utilities.module.css";
 import TradingViewWidget from "../TradingViewWidget/TradingViewWidget";
-import tradingViewLogo from "../../assets/TradingViewWidget/trading-view.svg";
+import tradingViewLogo from "../../../../assets/TradingViewWidget/trading-view.svg";
 
 export function TradingChart() {
     return <div className={styles.sectionWrapper}>

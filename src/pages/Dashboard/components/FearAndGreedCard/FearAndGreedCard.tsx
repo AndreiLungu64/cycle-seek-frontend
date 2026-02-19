@@ -1,7 +1,7 @@
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { StatsCard } from '../StatsCard/StatsCard';
 import styles from "./FearAndGreedCard.module.css";
-import utils from "../../styles/utilities.module.css"
+import utils from "../../../../styles/utilities.module.css"
 
 export function FearAndGreedCard() {
     return <StatsCard title={"Fear & Greed Index"}>
