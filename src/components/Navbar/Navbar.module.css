@@ -23,11 +23,11 @@
 .navbarWrapper {
   display: flex;
   width: 100%;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4rem;
 }
 
 .btnContentWrapper {
