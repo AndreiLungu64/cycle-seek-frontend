@@ -1,0 +1,16 @@
+.logo {
+  height: 2rem;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoText {
+  font-family: "Rethink Sans", sans-serif;
+  letter-spacing: 0.05rem;
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-extrabold);
+}

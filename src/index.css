@@ -12,6 +12,10 @@ p {
   margin: 0;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 :root {
   font-family: "Inter", sans-serif;
   color-scheme: light dark;
