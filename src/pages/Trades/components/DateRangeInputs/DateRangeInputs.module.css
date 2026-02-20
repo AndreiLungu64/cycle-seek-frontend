@@ -27,7 +27,28 @@
   padding: 0;
 }
 
+.btnQuery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 35%;
+  align-self: flex-end;
+  border-radius: 24px;
+  padding: 0.9rem;
+  font-size: var(--font-base);
+  background-color: var(--color-btn-active);
+}
+
+.inputsRowWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .label {
   display: inline-block;
   margin-bottom: 0.5rem;
+  color: var(--color-light-gray);
 }

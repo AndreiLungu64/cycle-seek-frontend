@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import './App.css'
 
 import Dashboard from './pages/Dashboard'
-import Charts from './pages/Charts'
+import Chart from './pages/Chart'
 import Trades from './pages/Trades'
 import Navbar from './components/Navbar'
 
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         errorElement: <div>404 Not Found</div>,
         children: [
             { path: "/", element: <Dashboard /> },
-            { path: "/chart", element: <Charts /> },
+            { path: "/chart", element: <Chart /> },
             { path: "/trades", element: <Trades /> }
         ]
     }
