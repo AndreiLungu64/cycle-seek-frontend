@@ -8,11 +8,19 @@ import RsiCard from "./components/RsiCard";
 import LiquidationsCard from "./components/LiquidationsCard";
 import AltcoinSeasonCard from "./components/AltcoinSeasonCard";
 import MarketDataCard from "./components/MarketDataCard";
+import useBtcQuotes from "../../hooks/useBtcQuote";
+import { OrbitProgress } from 'react-loading-indicators';
 
 export function Dashboard() {
+    const { data, isLoading } = useBtcQuotes();
+
+    if (isLoading) return <div className={styles.loadingContainer}>
+        <OrbitProgress color="var(--color-btn-active)" size="medium" />
+    </div>
+
     return <div className={styles.dashboardGrid}>
         <div className={`${styles.item1}`}>
-            <BtcPriceCard />
+            <BtcPriceCard price={data.quote.USD.price} priceChange={data.quote.USD.percent_change_24h} />
         </div>
         <div className={`${styles.item2}`}>
             <FearAndGreedCard />
@@ -33,7 +41,7 @@ export function Dashboard() {
             <BtcDominanceCard />
         </div>
         <div className={`${styles.item8}`}>
-            <AltcoinSeasonCard />
+            <AltcoinSeasonCard dominance={data.quote.USD.market_cap_dominance} />
         </div>
         <div>
             <MarketDataCard title={"MARKET CAP"} value={"$1,264,500,000,000.00"} explanation={"Total value of all mined coins"} />
