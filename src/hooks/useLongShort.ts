@@ -8,5 +8,6 @@ export function useLongShort() {
       const data = await response.json();
       return data;
     },
+    staleTime: 60000,
   });
 }

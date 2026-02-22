@@ -8,9 +8,9 @@ export function useRsi() {
   return useQuery<RsiData>({
     queryKey: ["rsi"],
     queryFn: async () => {
-      const data = await fetch(`http://localhost:3500/rsi`);
-      const rsi = await data.json();
-      return rsi;
+      const response = await fetch(`http://localhost:3500/rsi`);
+      const data = await response.json();
+      return data;
     },
     staleTime: 5 * 60 * 1000,
   });
