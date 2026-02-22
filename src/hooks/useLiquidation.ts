@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 
-export default function useBtcQuotes() {
+export function useLiquidation() {
   return useQuery({
-    queryKey: ["quote"],
+    queryKey: ["liquidation"],
     queryFn: async () => {
-      const response = await fetch(`http://localhost:3500/quote`);
+      const response = await fetch(`http://localhost:3500/liquidation`);
       const data = await response.json();
       return data;
     },

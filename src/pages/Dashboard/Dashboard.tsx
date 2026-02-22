@@ -13,14 +13,16 @@ import { OrbitProgress } from 'react-loading-indicators';
 import useFearGeed from "../../hooks/useFearGreed";
 import { useRsi } from "../../hooks/useRsi";
 import { useLongShort } from "../../hooks/useLongShort";
+import { useLiquidation } from "../../hooks/useLiquidation";
 
 export function Dashboard() {
-    const { data: btcData, isLoading: btcLoading } = useBtcQuotes();
-    const { data: fearGreedData, isLoading: fearGreedLoading } = useFearGeed();
-    const { data: rsiData, isLoading: rsiLoading } = useRsi();
-    const { data: longShortData, isLoading: longShortLoading } = useLongShort();
+    const { data: btcData, isLoading: isbtcLoading } = useBtcQuotes();
+    const { data: fearGreedData, isLoading: isFearGreedLoading } = useFearGeed();
+    const { data: rsiData, isLoading: isRsiLoading } = useRsi();
+    const { data: longShortData, isLoading: isLongShortLoading } = useLongShort();
+    const { data: liquidationData, isLoading: isLiquidationLoading } = useLiquidation();
 
-    if (btcLoading || fearGreedLoading || rsiLoading || longShortLoading) return <div className={styles.loadingContainer}>
+    if (isbtcLoading || isFearGreedLoading || isRsiLoading || isLongShortLoading || isLiquidationLoading) return <div className={styles.loadingContainer}>
         <OrbitProgress color="var(--color-btn-active)" size="medium" />
     </div>
 
@@ -41,7 +43,7 @@ export function Dashboard() {
             <LongShortCard long={longShortData.longAccount} short={longShortData.shortAccount} ratio={longShortData.longShortRatio} />
         </div>
         <div className={`${styles.item6}`}>
-            <LiquidationsCard />
+            <LiquidationsCard longUsd={liquidationData.totalLongUSD} shortUsd={liquidationData.totalShortUSD} />
         </div>
         <div className={`${styles.item7}`}>
             <BtcDominanceCard dominance={btcData.quote.USD.market_cap_dominance} />

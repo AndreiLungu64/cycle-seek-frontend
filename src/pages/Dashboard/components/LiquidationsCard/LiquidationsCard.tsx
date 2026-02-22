@@ -3,24 +3,31 @@ import styles from './LiquidationsCard.module.css'
 import ProgressBar from "../ProgressBar"
 import utils from '../../../../styles/utilities.module.css';
 
-export function LiquidationsCard() {
+export function LiquidationsCard({ longUsd, shortUsd }: { longUsd: number, shortUsd: number }) {
     return <StatsCard title={"24 Hours Liquidations"}>
-        <LongShortRatio />
-        <Liquidation />
+        <LiquidationRatio longUsd={longUsd} shortUsd={shortUsd} />
+        <Liquidation longUsd={longUsd} shortUsd={shortUsd} />
     </StatsCard>
 }
 
-function LongShortRatio() {
+function LiquidationRatio({ longUsd, shortUsd }: { longUsd: number, shortUsd: number }) {
+    const total = longUsd + shortUsd;
+    const totalMil = (total / 1000000).toFixed(2);
+    const longPerc = (longUsd / total * 100).toFixed(0);
+    const shortPerc = (shortUsd / total * 100).toFixed(0);
+    console.log(longPerc, shortPerc);
     return <div>
-        <p className={styles.totalLiqContainer}><span className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.totalLiqValueMargin}`}>$42.5M</span><span className={`${utils.textXs} ${utils.textGray}`}>total wrecked</span></p>
-        <p className={utils.spaceBetween}><span className={`${utils.textSm} ${utils.fontBold} ${utils.textGreen}`}>Longs 73%</span><span className={`${utils.textSm} ${utils.fontBold} ${utils.textRed}`}>Shorts 27%</span></p>
+        <p className={styles.totalLiqContainer}><span className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.totalLiqValueMargin}`}>${totalMil}M</span><span className={`${utils.textXs} ${utils.textGray}`}>total wrecked</span></p>
+        <p className={utils.spaceBetween}><span className={`${utils.textSm} ${utils.fontBold} ${utils.textGreen}`}>Longs {longPerc}%</span><span className={`${utils.textSm} ${utils.fontBold} ${utils.textRed}`}>Shorts {shortPerc}%</span></p>
         <ProgressBar max={100} value={73} color="#22c55e" background="#ef4444" />
     </div>
 }
 
-function Liquidation() {
+function Liquidation({ longUsd, shortUsd }: { longUsd: number, shortUsd: number }) {
+    const longMilUsd = (longUsd / 1000000).toFixed(2);
+    const shortMilUsd = (shortUsd / 1000000).toFixed(2);
     return <p className={`${utils.textSm} ${utils.textGray} ${styles.splitLiqLabelMargin} ${utils.spaceBetween}`}>
-        <span>Long Liquidations: <span className={`${utils.fontBold} ${utils.textWhite}`}>$31.2M</span></span>
-        <span>Short Liquidations: <span className={`${utils.fontBold} ${utils.textWhite}`}> $11.3M</span></span>
+        <span>Long Liquidations: <span className={`${utils.fontBold} ${utils.textWhite}`}>${longMilUsd}M</span></span>
+        <span>Short Liquidations: <span className={`${utils.fontBold} ${utils.textWhite}`}> ${shortMilUsd}M</span></span>
     </p>
 }
