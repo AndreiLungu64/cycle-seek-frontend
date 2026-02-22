@@ -12,13 +12,15 @@ import useBtcQuotes from "../../hooks/useBtcQuote";
 import { OrbitProgress } from 'react-loading-indicators';
 import useFearGeed from "../../hooks/useFearGreed";
 import { useRsi } from "../../hooks/useRsi";
+import { useLongShort } from "../../hooks/useLongShort";
 
 export function Dashboard() {
     const { data: btcData, isLoading: btcLoading } = useBtcQuotes();
     const { data: fearGreedData, isLoading: fearGreedLoading } = useFearGeed();
     const { data: rsiData, isLoading: rsiLoading } = useRsi();
+    const { data: longShortData, isLoading: longShortLoading } = useLongShort();
 
-    if (btcLoading || fearGreedLoading || rsiLoading) return <div className={styles.loadingContainer}>
+    if (btcLoading || fearGreedLoading || rsiLoading || longShortLoading) return <div className={styles.loadingContainer}>
         <OrbitProgress color="var(--color-btn-active)" size="medium" />
     </div>
 
@@ -36,7 +38,7 @@ export function Dashboard() {
             <BtcFloatCard />
         </div>
         <div className={`${styles.item5}`}>
-            <LongShortCard />
+            <LongShortCard long={longShortData.longAccount} short={longShortData.shortAccount} ratio={longShortData.longShortRatio} />
         </div>
         <div className={`${styles.item6}`}>
             <LiquidationsCard />

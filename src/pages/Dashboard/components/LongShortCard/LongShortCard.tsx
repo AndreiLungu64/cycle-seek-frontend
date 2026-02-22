@@ -3,21 +3,29 @@ import StatsCard from "../StatsCard"
 import styles from './LongShortCard.module.css'
 import utils from '../../../../styles/utilities.module.css';
 
-export function LongShortCard() {
+export function LongShortCard({ long, short, ratio }: { long: string, short: string, ratio: string }) {
     return <StatsCard title={"Long/Short Ratio"}>
-        <LongShortRatio />
-        <Sentiment />
+        <LongShortRatio long={long} short={short} ratio={ratio} />
+        <Sentiment ratio={ratio} />
     </StatsCard>
 }
 
-function LongShortRatio() {
+function LongShortRatio({ long, short, ratio }: { long: string, short: string, ratio: string }) {
+    const longPerc = (Number(long) * 100).toFixed(2);
+    const shortPerc = (Number(short) * 100).toFixed(2);
     return <div>
-        <p className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.ratioMargin}`}>1.24</p>
-        <p className={utils.spaceBetween}><span className={`${utils.textSm} ${utils.fontBold} ${utils.textGreen}`} >Longs 55.4%</span><span className={`${utils.textSm} ${utils.fontBold} ${utils.textRed}`} >Shorts 44.6%</span></p>
-        <ProgressBar max={100} value={70} color="#22c55e" background="#ef4444" />
+        <p className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.ratioMargin}`}>{Number(ratio).toFixed(2)}</p>
+        <p className={utils.spaceBetween}><span className={`${utils.textSm} ${utils.fontBold} ${utils.textGreen}`} >Longs {longPerc}%</span><span className={`${utils.textSm} ${utils.fontBold} ${utils.textRed}`} >Shorts {shortPerc}%</span></p>
+        <ProgressBar max={100} value={Number(longPerc)} color="#22c55e" background="#ef4444" />
     </div>
 }
 
-function Sentiment() {
-    return <p className={`${utils.textSm} ${utils.textGray}`}>Sentiment leans: <span className={`${utils.textSm} ${utils.fontBold} ${utils.textWhite}`}>Bullish</span></p>
+function Sentiment({ ratio }: { ratio: string }) {
+    const ratioNb = Number(ratio);
+    const message = ratioNb >= 2 ? "Strongly Bullish"
+        : ratioNb > 1 ? "Bullish"
+            : ratioNb === 1 ? "Neutral"
+                : ratioNb >= 0.5 ? "Bearish"
+                    : "Strongly Bearish";
+    return <p className={`${utils.textSm} ${utils.textGray}`}>Sentiment leans: <span className={`${utils.textSm} ${utils.fontBold} ${utils.textWhite}`}>{message}</span></p>
 }

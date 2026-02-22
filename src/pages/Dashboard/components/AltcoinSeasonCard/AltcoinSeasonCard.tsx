@@ -3,7 +3,7 @@ import StatsCard from "../StatsCard";
 import utils from '../../../../styles/utilities.module.css';
 
 export function AltcoinSeasonCard({ dominance }: { dominance: number }) {
-    const score = 100 - ((dominance - 35) / 35) * 100;
+    const score = 100 - ((dominance - 34) / 34) * 100;
 
     return <StatsCard title={"Altcoin Season"}>
         <LongShortRatio dominance={score} />
