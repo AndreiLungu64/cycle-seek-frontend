@@ -38,35 +38,34 @@ export function Dashboard() {
             <LiquidationsCard />
         </div>
         <div className={`${styles.item7}`}>
-            <BtcDominanceCard />
+            <BtcDominanceCard dominance={data.quote.USD.market_cap_dominance} />
         </div>
         <div className={`${styles.item8}`}>
             <AltcoinSeasonCard dominance={data.quote.USD.market_cap_dominance} />
         </div>
         <div>
-            <MarketDataCard title={"MARKET CAP"} value={"$1,264,500,000,000.00"} explanation={"Total value of all mined coins"} />
+            <MarketDataCard title={"MARKET CAP"} value={`$${data.quote.USD.market_cap.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`} explanation={"Total value of all mined coins"} />
         </div>
         <div>
-            <MarketDataCard title={"VOLUME (24H)"} value={"$34,500,000,000.00"} explanation={"Trading activity"} />
+            <MarketDataCard title={"VOLUME (24H)"} value={`$${data.quote.USD.volume_24h.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`} explanation={"Trading activity"} />
         </div>
         <div>
-            <MarketDataCard title={"VOL / MKT CAP"} value={"2.72%"} explanation={"Liquidity indicator"} />
+            <MarketDataCard title={"VOL / MKT CAP"} value={`${(data.quote.USD.volume_24h / data.quote.USD.market_cap * 100).toFixed(2)}%`} explanation={"Liquidity indicator"} />
         </div>
         <div>
-            <MarketDataCard title={"FDV"} value={"$1,348,000,000,000.00"} explanation={"Fully Diluted Valuation"} />
+            <MarketDataCard title={"FDV"} value={`$${data.quote.USD.fully_diluted_market_cap.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`} explanation={"Fully Diluted Valuation"} />
         </div>
         <div>
-            <MarketDataCard title={"CIRCULATING SUPPLY"} value={"19.69M BTC"} explanation={"93.7% of Max"} />
+            <MarketDataCard title={"CIRCULATING SUPPLY"} value={`${data.circulating_supply.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })} BTC`} explanation={`${(data.circulating_supply * 100 / data.max_supply).toFixed(2)}% of Max`} />
         </div>
         <div>
-            <MarketDataCard title={"MAX SUPPLY"} value={"21M BTC"} explanation={"Hard cap limit"} />
+            <MarketDataCard title={"MAX SUPPLY"} value={`${data.max_supply.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })} BTC`} explanation={"Hard cap limit"} />
         </div>
         <div>
-            <MarketDataCard title={"TOTAL SUPPLY"} value={"19.69M BTC"} explanation={"Mined coins (incl. lost)"} />
+            <MarketDataCard title={"TOTAL SUPPLY"} value={`${data.total_supply.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })} BTC`} explanation={"Mined coins (incl. lost)"} />
         </div>
         <div>
-            <MarketDataCard title={"TREASURY HOLDINGS"} value={"2.45M BTC"} explanation={"Held by companies/govs"} />
+            <MarketDataCard title={"PRICE CHANGE 30 DAYS"} value={`${data.quote.USD.percent_change_30d.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}%`} explanation={"Monthly price movement"} />
         </div>
     </div>
 }
-

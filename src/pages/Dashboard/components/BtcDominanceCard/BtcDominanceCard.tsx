@@ -3,26 +3,27 @@ import styles from "./BtcDominanceCard.module.css"
 import Chart from 'react-apexcharts';
 import utils from "../../../../styles/utilities.module.css";
 
-export function BtcDominanceCard() {
+export function BtcDominanceCard({ dominance }: { dominance: number }) {
+    const fDominance = Number(dominance.toFixed(2));
     return <StatsCard title={"Bitcoin Dominance"}>
-        <Dominance />
-        <DominanceChart />
-        <DominanceBar />
+        <Dominance dominance={fDominance} />
+        <DominanceChart dominance={fDominance} />
+        <DominanceBar dominance={fDominance} />
     </StatsCard>
 }
 
-function Dominance() {
+function Dominance({ dominance }: { dominance: number }) {
     return <div>
-        <p className={styles.valueLineWrapper}><span className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.value}`}>54.2%</span><span className={`${utils.textXs} ${utils.textGray}`}>of total market</span></p>
+        <p className={styles.valueLineWrapper}><span className={`${utils.textXl} ${utils.fontBold} ${utils.textWhite} ${styles.value}`}>{`${dominance}`}%</span><span className={`${utils.textXs} ${utils.textGray}`}>of total market</span></p>
     </div>
 }
 
 
-function DominanceBar() {
-    return <progress className={styles.progressBar} value={54.2} max={100}></progress>
+function DominanceBar({ dominance }: { dominance: number }) {
+    return <progress className={styles.progressBar} value={dominance} max={100}></progress>
 }
 
-function DominanceChart() {
+function DominanceChart({ dominance }: { dominance: number }) {
     const options = {
         chart: {
             id: "apexchart-example",
@@ -32,7 +33,7 @@ function DominanceChart() {
         },
         xaxis: {
             show: false,
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
+            categories: [1, 2, 3, 4, 5, 6, 7],
             labels: {
                 show: false
             },
@@ -48,7 +49,6 @@ function DominanceChart() {
         yaxis: {
             max: 100,
             show: false,
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
             labels: {
                 show: false
             },
@@ -92,7 +92,7 @@ function DominanceChart() {
     const series = [
         {
             name: "series-1",
-            data: [35, 55, 50, 100, 55, 65, 58,]
+            data: [35, 55, 50, 70, 55, 65, dominance]
         },
 
     ];
