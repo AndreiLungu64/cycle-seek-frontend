@@ -2,21 +2,33 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import { StatsCard } from '../StatsCard/StatsCard';
 import styles from "./FearAndGreedCard.module.css";
 import utils from "../../../../styles/utilities.module.css"
+import type { FearGreedData } from '../../../../hooks/useFearGreed';
 
-export function FearAndGreedCard() {
+export function FearAndGreedCard({ value }: FearGreedData) {
+
+    function getFearGreedColor(value: number) {
+        if (value >= 75) return "#84CC16";
+        if (value >= 55) return "#A3E635";
+        if (value >= 50) return "#FACC15";
+        if (value >= 25) return "#F97316";
+        return "#EF4444";
+    }
+
+    const color = getFearGreedColor(value);
+
     return <StatsCard title={"Fear & Greed Index"}>
-        <FearGreedGraph />
-        <FearGreedText />
+        <FearGreedGraph value={value} color={color} />
+        <FearGreedText value={value} color={color} />
     </StatsCard>
 
 }
 
-export function FearGreedGraph() {
+export function FearGreedGraph({ value, color }: { value: number, color: string }) {
     return <div className={styles.graphicWrapper}>
         <CircularProgressbar
-            value={55}
+            value={value}
             maxValue={100}
-            text={`${55}`}
+            text={`${value}`}
             strokeWidth={10}
             circleRatio={0.50}
             styles={{
@@ -24,7 +36,7 @@ export function FearGreedGraph() {
 
                 },
                 path: {
-                    stroke: `#84CC16`,
+                    stroke: color,
                     strokeLinecap: 'round',
                     transition: 'stroke-dashoffset 0.5s ease 0s',
                     transform: 'rotate(0.75turn)',
@@ -49,9 +61,20 @@ export function FearGreedGraph() {
     </ div >
 }
 
-function FearGreedText() {
+function FearGreedText({ value, color }: { value: number, color: string }) {
+    const label = value >= 75 ? "Extreme Greed"
+        : value >= 55 ? "Greed"
+            : value >= 50 ? "Neutral"
+                : value >= 25 ? "Fear"
+                    : "Extreme Fear";
+
+    const message = value >= 75 ? "Market sentiment is driven by extreme greed."
+        : value >= 55 ? "Market sentiment is currently driven by greed."
+            : value >= 50 ? "Market sentiment is currently neutral."
+                : value >= 25 ? "Market sentiment is currently driven by fear."
+                    : "Market sentiment is driven by extreme fear.";
     return <>
-        <p className={`${styles.value}`}>Greed</p>
-        <p className={`${utils.textSm} ${utils.textGray} ${styles.message}`}>Market sentiment is currently driven by greed.</p>
+        <p className={styles.value} style={{ color }}>{label}</p >
+        <p className={`${utils.textSm} ${utils.textGray} ${styles.message}`}>{message}</p>
     </>
 }
