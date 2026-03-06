@@ -8,6 +8,6 @@ export function useLiquidation() {
       const data = await response.json();
       return data;
     },
-    staleTime: 5 * 60 * 1000,
+    staleTime: 10 * 60 * 1000,
   });
 }
