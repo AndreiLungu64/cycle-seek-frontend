@@ -5,13 +5,13 @@ export type DataRangeType = {
 };
 
 export interface RawTrade {
-  trade_id: number;
+  trade_id: string;
   trade_date: string;
   year_month: string;
   price: string;
   quantity: string;
   quote_volume: string;
-  timestamp_ms: number;
+  timestamp_ms: string;
   is_buyer_maker: boolean;
   calendar_day: number;
   trade_hour: number;

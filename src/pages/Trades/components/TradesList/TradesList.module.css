@@ -1,0 +1,43 @@
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.tradesTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-sm);
+}
+
+.tradesTable th {
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  color: var(--color-light-gray);
+  font-weight: var(--font-weight-bold);
+  border-bottom: 0.1rem solid var(--color-dark-gray);
+  white-space: nowrap;
+}
+
+.tradesTable td {
+  padding: 0.5rem 0.8rem;
+  color: var(--color-white);
+  border-bottom: 0.1rem solid #ffffff08;
+  white-space: nowrap;
+}
+
+.tradesTable tr:hover td {
+  background-color: #ffffff08;
+}
+
+.buy {
+  color: var(--color-green);
+}
+
+.sell {
+  color: var(--color-red);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-gray);
+}
