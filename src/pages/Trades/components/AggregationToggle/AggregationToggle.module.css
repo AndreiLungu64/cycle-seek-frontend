@@ -31,3 +31,15 @@
   color: var(--color-light-gray);
   background-color: var(--color-dark-gray);
 }
+
+.aggrToggleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.countBadge {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-green);
+}

@@ -2,14 +2,17 @@ import { type Dispatch, type SetStateAction } from 'react';
 import styles from "./AggregationToggle.module.css";
 import utils from "../../../../styles/utilities.module.css";
 
-export function AggregationToggle({ aggrLevel, handleAggrLevel }: { aggrLevel: string, handleAggrLevel: Dispatch<SetStateAction<string>> }) {
-    return <div>
-        <label className={`${styles.label} ${utils.textSm} ${utils.fontBold}`}>DATA AGGREGATION LEVEL</label>
-        <div className={`${utils.cardBase} ${styles.btnWrapper}`}>
-            <DataSrcBtn text="Individual" aggrLevel={aggrLevel} handleAggrLevel={handleAggrLevel} value="raw_trades" />
-            <DataSrcBtn text="Minute" aggrLevel={aggrLevel} handleAggrLevel={handleAggrLevel} value="minute_trades" />
-            <DataSrcBtn text="Aggregated" aggrLevel={aggrLevel} handleAggrLevel={handleAggrLevel} value="aggr_trades" />
+export function AggregationToggle({ count, aggrLevel, isLoading, handleAggrLevel }: { count: number, aggrLevel: string, isLoading: boolean, handleAggrLevel: Dispatch<SetStateAction<string>> }) {
+    return <div className={`${styles.aggrToggleWrapper}`}>
+        <div>
+            <label className={`${styles.label} ${utils.textSm} ${utils.fontBold}`}>DATA AGGREGATION LEVEL</label>
+            <div className={`${utils.cardBase} ${styles.btnWrapper}`}>
+                <DataSrcBtn text="Individual" aggrLevel={aggrLevel} handleAggrLevel={handleAggrLevel} value="raw_trades" />
+                <DataSrcBtn text="Minute" aggrLevel={aggrLevel} handleAggrLevel={handleAggrLevel} value="minute_trades" />
+                <DataSrcBtn text="Aggregated" aggrLevel={aggrLevel} handleAggrLevel={handleAggrLevel} value="aggr_trades" />
+            </div>
         </div>
+        {(!isLoading && count !== 0) && <div className={`${styles.countBadge} ${utils.fontBold}`}>{count} trades found</div>}
     </div>
 }
 
