@@ -19,8 +19,8 @@ function filterEmptyParams(dateRange: DataRangeType) {
   const params = new URLSearchParams({});
   if (dateRange.year.from) params.set("yearFrom", dateRange.year.from);
   if (dateRange.year.to) params.set("yearTo", dateRange.year.to);
-  if (dateRange.month.from) params.set("monthFrom", dateRange.month.from);
-  if (dateRange.month.to) params.set("monthTo", dateRange.month.to);
+  if (dateRange.month.from) params.set("monthFrom", dateRange.month.from.padStart(2, "0"));
+  if (dateRange.month.to) params.set("monthTo", dateRange.month.to.padStart(2, "0"));
   if (dateRange.day.from) params.set("dayFrom", dateRange.day.from);
   if (dateRange.day.to) params.set("dayTo", dateRange.day.to);
   return params;
