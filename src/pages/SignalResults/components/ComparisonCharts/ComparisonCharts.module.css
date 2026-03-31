@@ -1,0 +1,17 @@
+.chartsWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.chartCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: var(--font-base);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}

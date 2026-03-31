@@ -1,0 +1,28 @@
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--font-base);
+  margin-bottom: 0.3rem;
+}
+
+.value {
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.explanation {
+  font-size: var(--font-sm);
+  color: var(--color-gray);
+}
