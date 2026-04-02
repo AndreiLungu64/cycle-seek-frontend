@@ -1,0 +1,57 @@
+.gridWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow-x: auto;
+  background-color: #1a1a2e;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.cornerCell {
+  width: 2.5rem;
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  gap: 1px;
+}
+
+.hourLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: var(--font-xs);
+  color: var(--color-gray);
+  padding: 0.2rem 0;
+}
+
+.dayLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  flex-shrink: 0;
+  font-size: var(--font-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-light-gray);
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 2rem;
+  border-radius: 2px;
+  font-size: var(--font-xs);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: default;
+}
+
+.cell:hover {
+  border-color: var(--color-btn-active);
+}
